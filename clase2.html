@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Password</title>
+  <title>Email</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,23 +53,17 @@
       margin-bottom: 32px;
       text-align: center;
     }
-    .form{
-      display: flex;
-      flex-direction: column;
-    }
-    .label{
-      font-size: var(--sm);
-      font-weight: bold;
-      margin-bottom: 4px;
-    }
-    .input{
+    .email-image{
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
       background-color: var(--text-input-field);
-      border: none;
-      border-radius: 8px;
-      height: 30px;
-      font-size: var(--md);
-      padding: 6px;
-      margin-bottom: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .email-image img{
+      width: 80px;
     }
     .primary-button{
       background-color: var(--hospital-green);
@@ -90,7 +84,7 @@
       .logo{
         display: block;
       }
-      
+
     }
   </style>
 </head>
@@ -98,18 +92,18 @@
   <div class="login">
     <div class="form-container">
       <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
-      <h1 class="title">Create a new password</h1>
-      <p class="subtitle">Enter a new password for you account</p>
+      <h1 class="title">Email has been send !!!!</h1>
+      <p class="subtitle">Please check your inbox for instruccions on how to reset the password</p>
+      <div class="email-image">
+        <img src="./icons/email.svg" alt="EMAIL-SEND">
+      </div>
 
-      <from action="/" class="form">
-        <label for=" password" class="label">Password</label>
-        <input type="password" id="password" placeholder="*********" class="input input-password">
+      <button class="primary-button login-button">Login</button>
 
-        <label for=" new-password" class="label">Password</label>
-        <input type="password" id="new-password" placeholder="*********" class="input input-password">
-
-        <input type="submit" value="Confirm" class="primary-button login-button">
-      </from>
+      <p class="resend">
+        <span>Didn't receive the email?</span>
+        <a href="http://" target="_blank">Resend</a>
+      </p>
     </div>
   </div>
 </body>
